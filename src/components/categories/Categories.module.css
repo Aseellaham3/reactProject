@@ -1,0 +1,13 @@
+
+.categ {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    flex-wrap: wrap;
+    width: 100%;
+}
+.category{
+    width: calc((100% - 80px ) / 9);
+    text-align: center;
+}

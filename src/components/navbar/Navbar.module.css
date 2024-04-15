@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(156, 174, 189);
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+    font-size: 40px;
+    color: white;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}

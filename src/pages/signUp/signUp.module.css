@@ -1,0 +1,17 @@
+.signUp{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+
+    gap: 20px;
+}
+.signUp label{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+}
+.signUp input{
+    padding: 10px;
+}
