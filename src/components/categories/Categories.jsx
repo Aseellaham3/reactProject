@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider , Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import style from "./Categories.module.css";
@@ -21,8 +21,6 @@ function Categories() {
       console.log("error");
       setIsLoading(false);
       setError(true);
-    }finally{
-      
     }
   };
   useEffect ( ()=>{
@@ -42,10 +40,14 @@ function Categories() {
      {categories.map(category => 
       <div className= {style.category} key={category._id}>
         <img src={category.image.secure_url} />
+        <Link className={style.details} to = {`/category/${category._id}`}> Details </Link>
+
 
       </div>)
       }
+
       </div>
+
       </>
 
   )

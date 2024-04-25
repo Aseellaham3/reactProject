@@ -11,6 +11,7 @@ import SignUp from "./pages/signUp/SignUp.jsx";
 import Login from "./pages/login/Login.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./layout/Root/Root.jsx";
+import CategoryDetails from "./components/categories/CategoryDetails.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +34,11 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
-      },
+      }, 
+      {
+        path: '/category/:id',
+        element : <CategoryDetails />
+      }
     ],
   },
 ]);

@@ -1,4 +1,7 @@
-
+.row{
+    display: flex;
+    justify-content: space-between;
+}
 .categ {
     display: flex;
     flex-direction: row;
@@ -10,4 +13,37 @@
 .category{
     width: calc((100% - 80px ) / 9);
     text-align: center;
+}
+.details{
+    color: black ;
+}
+.addCart{
+    color: white;
+    background-color: rgb(156, 174, 189);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    font-weight: 600;
+
+
+}
+.productImg{
+    width: 400px;
+    border-radius: 5px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 8px  #e9e9e9;
+    padding: 20px;
+
+}
+h5{
+
+    color: rgb(156, 174, 189);
 }
