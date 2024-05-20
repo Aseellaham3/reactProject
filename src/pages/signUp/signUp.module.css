@@ -4,9 +4,12 @@
     width: 30%;
     margin: 20px;
     padding: 20px;
+    background-color: white;
+    gap: 10px;
+    border-radius: 10px;
 
-    gap: 20px;
 }
+
 .signUp label{
     text-transform: capitalize;
     font-weight: 600;
@@ -14,4 +17,14 @@
 }
 .signUp input{
     padding: 10px;
+}
+button{
+    color: white;
+    background-color:rgb(180, 149, 188);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    border-radius: 10%;
+
 }

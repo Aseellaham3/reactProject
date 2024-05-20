@@ -6,7 +6,9 @@ import axios from "axios";
 import { object, string } from 'yup';
 
 
-export default function signUp() {
+export default function SignUp() {
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const [errors,setErrors] = useState([]);
 
@@ -55,6 +57,10 @@ export default function signUp() {
     
     const handleSubmit =  (e) => {
       e.preventDefault();
+      setIsLoading(true);
+      try{
+
+      
       console.log(user);
       const formData = new FormData();
       formData.append('userName' , user.userName);
@@ -62,8 +68,15 @@ export default function signUp() {
       formData.append('password' , user.password);
       formData.append('image' , user.image);
 
-      const {data} = axios.post(`https://ecommerce-node4.vercel.app/auth/signup` , formData);
+      const {data} = axios.post(`https://ecommerce-node4-five.vercel.app/auth/signup` , formData);
       console.log(data);
+      }
+      catch(error){
+        console.log(error);
+      }
+      finally{
+        setIsLoading(false);
+      }
     }
   return (
     <>
@@ -71,7 +84,7 @@ export default function signUp() {
       {errors.map(error => <li>{error}</li>)}
     </ul>
       <form className={style.signUp} onSubmit={handleSubmit}>
-      <h1>Sign Up Form</h1>
+      <h2>Sign Up Form</h2>
       <label>user name</label>
       <input type='text' name='userName' value={user.userName} onChange={handleChange}/>
       
@@ -84,9 +97,10 @@ export default function signUp() {
 
       <label>image</label>
       <input type='file' name='image' onChange={handleImageChange}/>
-      
+      <button disabled={isLoading?'disabled':null}>
+        {!isLoading?'Register':'wait...'}
+      </button>
 
-      <button>Register</button>
       </form>
     </>
   )

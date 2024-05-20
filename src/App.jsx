@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import axios from "axios";
-
-import Navbar from "./components/navbar/Navbar.jsx";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import Home from "./pages/home/Home.jsx";
 import Products from "./pages/products/Products.jsx";
 import SignUp from "./pages/signUp/SignUp.jsx";
@@ -12,43 +11,69 @@ import Login from "./pages/login/Login.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./layout/Root/Root.jsx";
 import CategoryDetails from "./components/categories/CategoryDetails.jsx";
+import ProtectedRouter from "./components/auth/ProtectedRouter.jsx";
+import UserContextProvider from "./context/User.jsx";
+import SendCode from './pages/login/SendCode';
+import ForgetPassword from './pages/login/ForgetPassword';
+import Cart from './pages/products/Cart.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
       {
-        path: '/',
-        element: <Home />,
+        path: "/",
+        element: 
+        <ProtectedRouter>
+        <Home />
+        </ProtectedRouter>,
       },
-     
 
       {
-        path: '/products',
+        path: "/products",
         element: <Products />,
       },
+
       {
-        path: '/signUp',
+        path: "/cart",
+        element: <Cart />,
+      },
+
+      {
+        path: "/signUp",
         element: <SignUp />,
       },
       {
-        path: '/login',
+        path: "/login",
         element: <Login />,
-      }, 
+      },
+      
       {
-        path: '/category/:id',
-        element : <CategoryDetails />
-      }
+        path: "/SendCode",
+        element: <SendCode />,
+      },
+      
+      {
+        path: "/ForgetPassword",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "/category/:id",
+        element: <CategoryDetails />,
+      },
     ],
   },
 ]);
 
-function App() { 
-
-
+function App() {
   return (
     <>
+    <UserContextProvider>
       <RouterProvider router={router} />
+      <ToastContainer />
+      </UserContextProvider>
+
     </>
   );
 }

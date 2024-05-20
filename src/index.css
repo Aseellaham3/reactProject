@@ -2,3 +2,9 @@ nav ul li .nav_link.active{
     border-bottom: 3px solid white;
     padding: 10px 0;
 }
+
+body{
+    background-image: url("./assets/images/personal-shopper-office-with-client.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

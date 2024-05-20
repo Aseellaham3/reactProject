@@ -3,12 +3,15 @@
     padding: 0;
 }
 nav{
-    background-color: rgb(156, 174, 189);
-    padding: 20px;
+    background-color: rgba(180, 149, 188, 0.855);
+    padding: 10px;
     display: flex;
     gap: 50px;
     font-size: 40px;
     color: white;
+}
+.nav{
+    font-size: larger;
 }
 ul{
     display: flex;
@@ -23,4 +26,13 @@ a{
     font-size: 20px;
     text-decoration: none;
     color: white;
+}
+.logoutBtn{
+    
+    font-size: 20px;
+    color:  rgb(180, 149, 188);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
 }
