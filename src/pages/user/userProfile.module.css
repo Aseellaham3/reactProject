@@ -1,0 +1,175 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    margin:  20px auto;
+    width: 80%;
+    
+
+
+}
+
+.welcome{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 80vh;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+
+
+}
+.img{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid rgb(190, 190, 190);
+}
+.profileNav{
+
+    display: flex;
+    flex-direction: column;
+    width: 20%!important;
+    border-radius: 10px 0 0 10px ;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.488);
+    color: white!important;
+
+}
+
+.profileNav span{
+    color: white!important;
+margin: auto!important;
+}
+
+
+.welcome h4,
+.welcome h1{
+    color:  black!important;
+
+}
+.cart{
+    background-color: white;
+    border-radius: 0 10px 10px 0 ;
+    border-left: 0.5px solid rgba(144, 122, 151, 0.644);
+    padding: 40px;
+    color:  rgb(90, 32, 108)!important;
+
+
+}
+.cartImg {
+    width: 100px;
+    height: 130px;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 5px 2px 5px  rgb(96, 96, 96);
+    background-color: white;
+
+}
+.cart p {
+    padding: 5px;
+    width: fit-content;
+    font-size: 14px;
+    border-radius: 10px;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.836)!important;
+}
+.order{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+    text-align: start;
+
+}
+
+.order label{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+}
+.order input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid  rgba(0, 0, 0, 0.67);
+
+}
+.order button{
+    color: white!important;
+    background-color:rgba(0, 0, 0, 0.836)!important;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    border-radius: 10px;
+
+}
+
+
+.bg{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+.orderPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 80vh;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.878);
+    border-radius: 10px;
+
+}
+.orderImages{
+    width: 50px;
+    height: 50px;
+}
+.orderDetails{
+    background-color: rgb(247, 244, 244);
+    text-transform: capitalize;
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+    text-align: start;
+    border: 0.5ipx solid rgba(255, 255, 255, 0.878);;
+
+
+}
+.orderDetails h4{
+    text-transform: capitalize;
+}
+.orderView{
+    display: flex;
+    flex-direction: column;
+
+}
+.orderProducts{
+    display: flex;
+
+}
+ p span{
+    font-weight: 600;
+    color: black;
+}
+.orderDetails .start{
+    width: 65%;
+}
+ h1 span{
+    font-size: 25px;
+
+}
+.orderDetails p{
+    color: black!important;
+
+}

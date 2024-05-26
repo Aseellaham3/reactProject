@@ -1,0 +1,57 @@
+.filters {
+  display: flex;
+  width: 100%;
+  background-color: rgba(42, 41, 42, 0.574);
+  justify-content: space-around;
+}
+.price,
+.sort,
+.sales {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  width: calc(100% / 4);
+  justify-content: center;
+  align-items: center;
+}
+.price input {
+  width: calc((100% / 3) - 20px);
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  color: rgb(88, 29, 99);
+  height: max-content;
+  font-size: 16px;
+  padding: 0 10px;
+}
+.price button {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  width: calc((100% / 3) - 20px);
+  padding: 0 10px;
+  height: max-content;
+  text-align: center;
+  font-size: 16px !important;
+}
+select {
+  width: 190px;
+  border-radius: 5px;
+  border: none;
+  padding: 0 10px;
+  color: rgb(88, 29, 99);
+}
+.sales button {
+  padding: 0px;
+  font-size: 16px;
+  background-color: white!important;
+  color: black!important;
+  border: none;
+  height: max-content;
+  width: 70%;
+  border-radius: 5px;
+}
+.sales button img {
+  width: 8%;
+  background-color: rgba(240, 248, 255, 0);
+}
