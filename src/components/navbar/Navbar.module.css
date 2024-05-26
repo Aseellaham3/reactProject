@@ -1,38 +1,90 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-nav{
-    background-color: rgba(180, 149, 188, 0.855);
-    padding: 10px;
-    display: flex;
-    gap: 50px;
-    font-size: 40px;
-    color: white;
-}
-.nav{
-    font-size: larger;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
+nav {
+  background-color: rgba(51, 22, 57, 0.204);
+  background-color: white;
+  display: flex;
+  font-size: 40px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 999;
+  position: sticky;
 
+  top: 0;
 }
-a{
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
+.bouteqName {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 10px;
+  display: flex;
 }
-.logoutBtn{
-    
-    font-size: 20px;
-    color:  rgb(180, 149, 188);
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
+.logoImg{
+  width: 60px;
+  height: 40px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+.logoutBtn {
+  font-size: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding:5px 10px ;
+}
+
+.justify {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+.searchForm {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  margin: auto;
+}
+.searchInput {
+  font-size: 12px;
+  height: min-content;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid rgba(51, 22, 57, 0.855);
+  width: 300px;
+}
+.searchBtn {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  height: min-content;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 0 10px 10px 0;
+  width: 25%;
+}
+.count{
+  background-color: white;
+  border-radius: 50%;
+  color: rgb(51, 22, 57);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 5px;
 }

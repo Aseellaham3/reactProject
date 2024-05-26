@@ -1,36 +1,47 @@
 .container{
-    width: calc(100% - 100px);
-    margin: auto;
+    width: calc(100% - 150px);
+    margin: auto ;
+    background-color: rgba(42, 41, 42, 0.574);
+
 }
+
 .row{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
   
 }
 .categ {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    background-color: rgba(255, 255, 255, 0.471);
-    box-shadow: 0.5 0.5 rgb(180, 149, 188);
+    background-color: rgba(255, 255, 255, 0.578);
     width: 100%;
-    margin:100px 0;
+    height: min-content;
+    box-shadow: 0px 0px 30px 10px  rgba(134, 134, 134, 0.855);
+    z-index: 1;
 }
 .category{
     width: calc((100% - 100px ) / 9);
     text-align: center;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+
+
 }
 .details{
-    color: rgb(180, 149, 188); 
+    color:  rgba(51, 22, 57, 0.855); 
     background-color: white;
-    padding: 10px;
-    border: 1px solid rgb(180, 149, 188);
-    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 7px;
+    margin: 20px ;
+    padding:0px 10px;
 }
 .addCart{
-    color: white;
-    background-color:rgb(180, 149, 188);
+     background-color: white;
+    color: black;
     border-radius: 5px;
     border: none;
     padding: 10px;
@@ -40,8 +51,10 @@
 
 }
 .productImg{
-    width: 400px;
+    width: 200px;
+    height: 300px;
     border-radius: 5px;
+
 }
 .product{
     display: flex;
@@ -50,16 +63,49 @@
     gap: 10px;
     margin: 30px 10px;
     border-radius: 5px;
-    box-shadow: 10px 10px 8px  #e9e9e9;
-    padding: 30px;
-    background-color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.362);
+
 
 }
 h5{
-    color: rgb(180, 149, 188);
+    color: white!important;
 }
 .rowBtn{
     display: flex;
     justify-content: space-between;
     gap: 50px;
+}
+.category img{
+    width: 120px;
+    margin: 20px auto;
+
+}
+.bg{
+    background-color: rgba(102, 101, 102, 0.301);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-around;
+}
+.bg h1{
+    text-transform: capitalize;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.price{
+    display: flex;
+    gap: 10px;
+  }
+  .priceBefor{
+    color: red;
+    text-decoration: line-through;
+  }
+p {
+    color: white!important;
 }

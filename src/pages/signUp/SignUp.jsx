@@ -1,9 +1,9 @@
-import React from 'react'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import style from "./signUp.module.css";
 import axios from "axios";
 import { object, string } from 'yup';
+
+import { toast } from 'react-toastify';
 
 
 export default function SignUp() {
@@ -69,6 +69,8 @@ export default function SignUp() {
       formData.append('image' , user.image);
 
       const {data} = axios.post(`https://ecommerce-node4-five.vercel.app/auth/signup` , formData);
+      toast.success("welcome")
+
       console.log(data);
       }
       catch(error){
@@ -80,9 +82,6 @@ export default function SignUp() {
     }
   return (
     <>
-  <ul>
-      {errors.map(error => <li>{error}</li>)}
-    </ul>
       <form className={style.signUp} onSubmit={handleSubmit}>
       <h2>Sign Up Form</h2>
       <label>user name</label>

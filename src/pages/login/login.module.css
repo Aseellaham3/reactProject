@@ -2,11 +2,16 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin: 20px;
+    margin: 40px auto;
     padding: 20px;
     gap: 20px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
+
+}
+.login h2{
+    text-align: center;
+
 }
 
 .login label{
@@ -16,6 +21,8 @@
 }
 .login input{
     padding: 10px;
+    border: none;
+    border-bottom: 0.5px solid rgba(183, 182, 182, 0.799);
 }
 
 li{
@@ -27,36 +34,45 @@ li{
     width: calc(100% / 3 );
     gap: 20px;
     background-color: white;
-    border-radius: 10px;
-    
-    margin: 20px;
+    color: black!important;
+    margin: 40px auto;
     padding: 20px;
+    border-radius: 5px;
     
 
 }
-.resetPass input {
+.resetPass h5,
+.resetPass h4
+ {
+    text-align: center;
+    color: black!important;
+    text-transform: capitalize;
+    width: 100%;
+    height: fit-content;
 
-   padding: 10px;
-    border-radius: 10px;
-    border: 1px solid  rgb(180, 149, 188);
-;
-    color:rgb(101, 129, 152);
+}
+.resetPass input {
+    padding: 10px;
+    border: none;
+    border-bottom: 0.5px solid rgba(183, 182, 182, 0.799);
 }
 .resetPass button{
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid  rgb(180, 149, 188);
-    ;
-    background-color:rgb(180, 149, 188);
+    border: 1px solid   rgba(51, 22, 57, 0.855);
+    background-color: rgba(51, 22, 57, 0.855);
 }
-
-
+.resetPass img{
+    width: 70%;
+    margin: auto;
+}
+/*
 h4, label,h2{
-    color:rgb(180, 149, 188)!important;
-}
+    color: rgba(51, 22, 57, 0.855)!important;
+}*/
 button{
     color: white;
-    background-color:rgb(180, 149, 188);
+    background-color: rgba(51, 22, 57, 0.855);
     border: none;
     padding: 10px;
     width: 100%;

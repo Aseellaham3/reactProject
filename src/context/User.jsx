@@ -12,17 +12,19 @@ const UserContextProvider = ({children}) => {
     if (token) {
       const decoded = jwtDecode(token);
       setUserName(decoded.userName);
-    
-      
     }
   };
   useEffect(() => {
     getUserData();
   });
+
+
   return (
-    <UserContext.Provider value={{ userName, getUserData , setUserName}}>
+    <UserContext.Provider value={ {userName, getUserData , setUserName}}>
       {children}
     </UserContext.Provider>
   );
 };
 export default UserContextProvider;
+
+

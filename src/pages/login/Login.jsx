@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import {
-  createBrowserRouter,
-  RouterProvider,
   useNavigate,
 } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import style from "./Login.module.css";
 import { object, string } from "yup";
 import axios from "axios";
@@ -65,12 +62,12 @@ export default function Login() {
         localStorage.setItem("userToken", data.token);
         getUserData();
         navigate("/");
+        toast.success("login successfully")
       }
       //error.response.data.message
     } catch (error) {
-      toast.error(error.responce.data.message, {
+      toast.error("The email or password you’ve entered is incorrect.", {
         position: "bottom-center",
-        autoClose: false,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -90,11 +87,6 @@ export default function Login() {
 
   return (
     <>
-      <ul>
-        {errors.map((error) => (
-          <li>{error}</li>
-        ))}
-      </ul>
       <form className={style.login} onSubmit={handleSubmit}>
         <h2>Login Form</h2>
         <label>email</label>

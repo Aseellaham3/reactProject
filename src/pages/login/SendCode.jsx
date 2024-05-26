@@ -5,6 +5,7 @@ import axios from "axios";
 import { UserContext } from "../../context/User";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import forgetPass from "../../assets/images/Forgotpassword.svg";
 
 export default function SendCode() {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ export default function SendCode() {
 
   return (
     <div className={style.resetPass}>
+      <h2>Send code</h2>
       <h5>enter your email to send code</h5>
       <input
         type="email"
@@ -48,6 +50,7 @@ export default function SendCode() {
         onChange={handleChange}
       />
       <button onClick={sendCodeFun}> Send</button>
+      <img src={forgetPass}/>
     </div>
   );
 }
