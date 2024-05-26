@@ -4,8 +4,6 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Styles from "./userProfile.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { IoLocation } from "react-icons/io5";
 
 function OrderDetails() {
@@ -35,6 +33,7 @@ function OrderDetails() {
 
   useEffect(() => {
     viewProfile();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {

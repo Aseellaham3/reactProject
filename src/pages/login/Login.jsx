@@ -4,7 +4,6 @@ import {
 } from "react-router-dom";
 import {  useState } from "react";
 import style from "./Login.module.css";
-import { object, string } from "yup";
 import axios from "axios";
 import { Bounce, toast } from "react-toastify";
 import { UserContext } from "../../context/User";
@@ -21,7 +20,6 @@ export default function Login() {
     password: "",
   });
 
-  const [errors, setErrors] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,11 +29,12 @@ export default function Login() {
     });
   };
 
-  const validateData = async () => {
+ /* const validateData = async () => {
     const userSchema = object({
       name: string().min(5).max(20).required(),
       password: string().min(8).max(20).required(),
     });
+
     try {
       await userSchema.validate(user, { abortEarly: false });
       setErrors([]);
@@ -46,6 +45,7 @@ export default function Login() {
       return false;
     }
   };
+  */
 
   const handleSubmit = async (e) => {
     e.preventDefault();

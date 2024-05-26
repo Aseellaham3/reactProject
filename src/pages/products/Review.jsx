@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./Products.module.css";
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
@@ -37,6 +36,7 @@ function Review() {
 
   useEffect(() => {
     getReviews();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const token = localStorage.getItem("userToken");
@@ -64,6 +64,9 @@ function Review() {
       setIsLoading(false);
     }
   };
+  if (isLoading) {
+    <p>loading...</p>;
+  }
 
   return (
     <>

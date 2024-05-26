@@ -8,6 +8,7 @@ export const SortContext = React.createContext({
   sortHandler: () => {},
 });
 
+// eslint-disable-next-line react/prop-types
 const SortContextProvider = ({ children }) => {
   const [sortSelect, setSortSelect] = useState("");
 

@@ -4,7 +4,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Styles from "./userProfile.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 function Order() {
   const navigate = useNavigate();
@@ -90,9 +90,7 @@ function Order() {
     getProducts();
   });
 
-  const viewMyOrder = () => {
-    navigate("/orderDetails");
-  };
+
   if (isLoading) {
     return <p>loading...</p>;
   }

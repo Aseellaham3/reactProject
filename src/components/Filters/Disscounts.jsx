@@ -1,4 +1,3 @@
-import React from "react";
 
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -41,15 +40,16 @@ function Disscounts() {
     getAllProducts();
     toast.success("products with disscounts");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   if (isLoading) {
-    return <p>loading...</p>;
+    <p>loading...</p>;
   }
 
   return (
     <>
-
+      {error}
       <div className={style.cart}>
         {products.map((product) => (
           <div className={style.productCard} key={product._id}>

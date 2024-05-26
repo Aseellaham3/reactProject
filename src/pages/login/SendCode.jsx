@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./Login.module.css";
 import axios from "axios";
-import { UserContext } from "../../context/User";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import forgetPass from "../../assets/images/Forgotpassword.svg";

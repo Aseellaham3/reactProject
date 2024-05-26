@@ -19,14 +19,12 @@ import UserProfile from "./pages/user/UserProfile.jsx";
 import Information from "./pages/user/Information.jsx";
 import Contact from "./pages/user/Contact.jsx";
 import Order from "./pages/user/Order.jsx";
-import Search from "./components/search/Search.jsx";
 import Filters from "./components/Filters/Filters";
 import FiltersResult from "./components/Filters/FiltersResult.jsx";
 import Disscounts from "./components/Filters/Disscounts.jsx";
 import Sort from "./components/Filters/Sort.jsx";
 import CartContextProvider from "./context/CartContext.jsx";
 import OrderDetails from "./pages/user/OrderDetails.jsx";
-import Navbar from "./components/navbar/Navbar.jsx";
 import SearchContextProvider from "./context/SearchContext.jsx";
 import SortContextProvider from "./context/SortContext.jsx";
 

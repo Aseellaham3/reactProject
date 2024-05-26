@@ -1,8 +1,5 @@
-import React, { useContext } from "react";
-import { Navigate } from "react-router-dom";
 import style from "./Login.module.css";
 import axios from "axios";
-import { UserContext } from "../../context/User";
 import { useState } from "react";
 import { toast } from "react-toastify";
 

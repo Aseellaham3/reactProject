@@ -1,7 +1,6 @@
 import {  useState } from "react";
 import style from "./signUp.module.css";
 import axios from "axios";
-import { object, string } from 'yup';
 
 import { toast } from 'react-toastify';
 
@@ -10,7 +9,6 @@ export default function SignUp() {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const [errors,setErrors] = useState([]);
 
     const [user, serUser] = useState({
       userName:'',
@@ -18,7 +16,7 @@ export default function SignUp() {
       password:'',
       image:''
     })
-
+/*
     const validateData = async() => {
       const userSchema = object ({
         name:string().min(5).max(20).required(),
@@ -36,7 +34,7 @@ export default function SignUp() {
         return false;
       }
     }
-    
+   */ 
     
     const handleChange = (e)=>{
       const {name,value} = e.target;

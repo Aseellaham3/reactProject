@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import style from "./Categories.module.css";
@@ -27,6 +26,7 @@ export function CategoryDetails() {
 
   useEffect(() => {
     getProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const addToCart = async (id) => {

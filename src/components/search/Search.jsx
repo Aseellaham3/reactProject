@@ -1,4 +1,3 @@
-import React from "react";
 
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -39,6 +38,7 @@ function Search() {
 
   useEffect(() => {
     Find();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {

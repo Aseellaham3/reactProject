@@ -1,7 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+// eslint-disable-next-line react-refresh/only-export-components
 export const cart_context = createContext();
 
+// eslint-disable-next-line react/prop-types
 const CartContextProvider = ({children}) => {
   const [cartCount, setCartCount] = useState(0);
 

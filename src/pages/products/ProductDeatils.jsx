@@ -1,6 +1,5 @@
 import { useParams , useNavigate } from "react-router-dom";
 import axios from "axios";
-import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -11,10 +10,9 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { FaStar } from "react-icons/fa";
 import { useContext } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { cart_context } from "../../context/CartContext";
-const token = localStorage.getItem("userToken");
+// const token = localStorage.getItem("userToken");
 
 export function ProductDetails() {
   const navigate = useNavigate();
@@ -41,6 +39,7 @@ export function ProductDetails() {
 
   useEffect(() => {
     getProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const addToCart = async (id) => {

@@ -1,11 +1,10 @@
-import React from 'react'
 
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import style from "../../pages/products/Products.module.css";
 import { FaStar } from "react-icons/fa";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { toast } from 'react-toastify';
 import axios from "axios";
 
@@ -51,6 +50,7 @@ function FiltersResult() {
     Find();
     toast.success(`prices between ${minPrice} and ${maxPrice}`);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [maxPrice, minPrice]);
 
   if (isLoading) {

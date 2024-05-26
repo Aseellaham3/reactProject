@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 
 export const UserContext = createContext();
+// eslint-disable-next-line react/prop-types
 const UserContextProvider = ({children}) => {
   const [userName, setUserName] = useState("");
 

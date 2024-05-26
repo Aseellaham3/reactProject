@@ -1,13 +1,11 @@
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import style from "../../pages/products/Products.module.css";
 import { FaStar } from "react-icons/fa";
-import Products from './../../pages/products/Products';
 import { toast } from "react-toastify";
 
 function Sort() {
@@ -47,6 +45,7 @@ function Sort() {
   };
   useEffect(() => {
     getAllProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sort]);
 
 
