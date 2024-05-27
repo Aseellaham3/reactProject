@@ -47,7 +47,7 @@ function Products({children}) {
     getAllProducts();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchContext, page, sortContext]);
-
+{/*
   const handleParameter = () => {
     const url = new URL(
       `https://ecommerce-node4-five.vercel.app/products?page=${page}&limit=4&search=${searchContext.query}&sort=${sortContext.sortSelect}`
@@ -75,9 +75,32 @@ function Products({children}) {
 
     console.log(urlParam.toString());
 
-
    // window.location.search = urlParam.toString();
   };
+*/}
+
+const handleParameter = () => {
+  const url = new URL(window.location.href);
+
+  const urlParams = new URLSearchParams(url.search);
+
+  if (searchContext.query) {
+    urlParams.set("search", searchContext.query);
+  } else {
+    urlParams.delete("search");
+  }
+  if (sortContext.sortSelect) {
+    urlParams.set("sort", sortContext.sortSelect);
+  } else {
+    urlParams.delete("sort");
+  }
+
+  url.search = urlParams.toString();
+
+  window.history.replaceState({}, '', url.toString());
+};
+
+
 
   useEffect(() => {
     handleParameter();
